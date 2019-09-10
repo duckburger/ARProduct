@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour
     const string k_FadeOffAnim = "FadeOff";
     const string k_FadeOnAnim = "FadeOn";
 
+    [SerializeField] PlaceOnPlane placeOnPlane;
+
     [SerializeField]
     ARPlaneManager m_PlaneManager;
 
@@ -71,7 +73,7 @@ public class UIManager : MonoBehaviour
         if (m_CameraManager != null)
             m_CameraManager.frameReceived += FrameChanged;
 
-        PlaceOnPlane.onPlacedObject += PlacedObject;
+        placeOnPlane.onPlacedObject += PlacedObject;
         Debug.Log($"Registered UI on frame event");
     }
 
@@ -80,7 +82,7 @@ public class UIManager : MonoBehaviour
         if (m_CameraManager != null)
             m_CameraManager.frameReceived -= FrameChanged;
 
-        PlaceOnPlane.onPlacedObject -= PlacedObject;
+        placeOnPlane.onPlacedObject -= PlacedObject;
     }
 
     public void Reset()

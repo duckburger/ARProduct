@@ -21,7 +21,7 @@ public class PlaceOnPlane : MonoBehaviour
 
     ARPlaneManager planeManager;
     ARPointCloudManager cloudManager;
-    public static Action onPlacedObject;
+    public Action onPlacedObject;
     /// <summary>
     /// The prefab to instantiate on touch.
     /// </summary>
