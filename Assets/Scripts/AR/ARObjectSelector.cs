@@ -45,10 +45,10 @@ public class ARObjectSelector : MonoBehaviour
                 {
                     if (!spawnedArch)
                     {
-                        spawnedArch = Instantiate(uiArchPrefab, Input.mousePosition + new Vector3(0f, 10f, 0f), Quaternion.identity, uiCanvas.transform).GetComponent<FillArch>();
+                        spawnedArch = Instantiate(uiArchPrefab, Input.mousePosition + new Vector3(0f, 50f, 0f), Quaternion.identity, uiCanvas.transform).GetComponent<FillArch>();
                         Debug.Log($"Insatntiating new arch");
                     }
-                    spawnedArch.transform.position = Input.mousePosition + new Vector3(0f, 10f, 0f);
+                    spawnedArch.transform.position = Input.mousePosition + new Vector3(0f, 50f, 0f);
                     spawnedArch.SetFillValue(normalizedTimer);
                     holdingOverObject = true;
                     hitObject = hit.collider.gameObject;   

@@ -1485,7 +1485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingHeight: 0.3
-  timeToActivate: 2.3
+  timeToActivate: 1.8
   uiCanvas: {fileID: 1149660319}
   hitObject: {fileID: 0}
   holdingOverObject: 0

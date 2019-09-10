@@ -29,7 +29,7 @@ public class RotationUIPanel : MonoBehaviour
 
         if (!arrowsCollider)
             arrowsCollider = GetComponent<BoxCollider>();    
-            
+
         SizeToCollider();        
     }
 
@@ -40,12 +40,14 @@ public class RotationUIPanel : MonoBehaviour
         if (sessionOrigin)
         {
             mainCam = sessionOrigin.camera;
+            Debug.Log($"Found camera inside rotation indicator!!!");;
         }
     }
 
     private void Update()
     {
         CheckRaycast();
+        SizeToCollider();
     }
 
     void CheckRaycast()
@@ -83,9 +85,13 @@ public class RotationUIPanel : MonoBehaviour
 
     public void SizeToCollider()
     {
-        rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, trackedCollider.bounds.size.x);
-        rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, trackedCollider.bounds.size.y);
-        arrowsCollider.size = new Vector3(trackedCollider.bounds.size.x, trackedCollider.bounds.size.y, 0.1f);
+        if (trackedCollider)
+        {
+            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, trackedCollider.bounds.size.x * 1.12f);
+            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, trackedCollider.bounds.size.y * 1.12f);
+            arrowsCollider.size = new Vector3(trackedCollider.bounds.size.x * 1.12f, trackedCollider.bounds.size.y * 1.12f, 0.1f);
+             Debug.Log($"Sized rotation indicator!!!");;
+        }        
     }
 
     void Rotate()
