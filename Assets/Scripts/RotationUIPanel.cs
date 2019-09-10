@@ -19,18 +19,17 @@ public class RotationUIPanel : MonoBehaviour
     Vector3 rotationChange;
     bool isOn = true;
     [HideInInspector] public bool isRotating = false;
-    private void Awake()
+
+    private void Start()
     {
         trackedObject = transform.parent.gameObject;
         trackedCollider = trackedObject.GetComponent<Collider>();
         rect = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();    
+        canvasGroup = GetComponent<CanvasGroup>();  
+
         if (!arrowsCollider)
             arrowsCollider = GetComponent<BoxCollider>();    
-    }
-
-    private void Start()
-    {
+            
         SizeToCollider();        
     }
 
