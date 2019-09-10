@@ -72,6 +72,7 @@ public class UIManager : MonoBehaviour
             m_CameraManager.frameReceived += FrameChanged;
 
         PlaceOnPlane.onPlacedObject += PlacedObject;
+        Debug.Log($"Registered UI on frame event");
     }
 
     void OnDisable()
@@ -108,6 +109,7 @@ public class UIManager : MonoBehaviour
         if (planeManager == null)
             return false;
 
+        Debug.Log($"<color=red>Found plane manager</color> als found {planeManager.trackables.count} planes");
         return planeManager.trackables.count > 0;
     }
 

@@ -84,11 +84,7 @@ public class PlaceOnPlane : MonoBehaviour
 
                 planeManager.enabled = false;
                 cloudManager.enabled = false;
-            }
-            else
-            {
-                spawnedObject.transform.position = hitPose.position; // Moves existing object into place
-            }
+            }            
         }
     }
 

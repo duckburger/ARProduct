@@ -40,6 +40,8 @@ public class ARSwitch : MonoBehaviour
     {
         session.SetActive(true);
         sessionOrigin.SetActive(true);
+        sessionOrigin.GetComponent<ARPlaneManager>().enabled = true;
+        sessionOrigin.GetComponent<ARPointCloudManager>().enabled = true;
         arUI.SetActive(true);
         regularCamera.SetActive(false);
         threeDObject.SetActive(false);
@@ -58,4 +60,5 @@ public class ARSwitch : MonoBehaviour
         
         sessionOrigin.GetComponent<PlaceOnPlane>().Reset();
     }
+    
 }
