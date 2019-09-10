@@ -18,6 +18,9 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField] Scaler scaler;
     [Space(10)]
     [SerializeField] GameObject m_PlacedPrefab;
+
+    ARPlaneManager planeManager;
+    ARPointCloudManager cloudManager;
     public static Action onPlacedObject;
     /// <summary>
     /// The prefab to instantiate on touch.
@@ -36,6 +39,8 @@ public class PlaceOnPlane : MonoBehaviour
     void Awake()
     {
         m_RaycastManager = GetComponent<ARRaycastManager>();
+        cloudManager = GetComponent<ARPointCloudManager>();
+        planeManager = GetComponent<ARPlaneManager>();
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -76,11 +81,30 @@ public class PlaceOnPlane : MonoBehaviour
                 scaler?.AssignSpawnedObject(spawnedObject.transform);
                 scaler?.AnimateIn();
                 onPlacedObject?.Invoke();
+
+                planeManager.enabled = false;
+                cloudManager.enabled = false;
             }
             else
             {
                 spawnedObject.transform.position = hitPose.position; // Moves existing object into place
             }
+        }
+    }
+
+    void DeletePlanes()
+    {
+        foreach (ARPlane plane in planeManager.trackables)
+        {
+            plane.gameObject.SetActive(false);
+        }
+    }
+
+    void DeleteClouds()
+    {
+        foreach (ARPointCloud cloud in cloudManager.trackables)
+        {
+            cloud.gameObject.SetActive(false);
         }
     }
 
