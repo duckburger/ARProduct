@@ -80,6 +80,7 @@ public class PlaceOnPlane : MonoBehaviour
                 spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
                 scaler?.AssignSpawnedObject(spawnedObject.transform);
                 scaler?.AnimateIn();
+                scaler?.ApplyScale(1.3f);
                 onPlacedObject?.Invoke();
 
                 planeManager.enabled = false;

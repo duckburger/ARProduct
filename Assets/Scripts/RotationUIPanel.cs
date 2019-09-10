@@ -12,7 +12,7 @@ public class RotationUIPanel : MonoBehaviour
     [SerializeField] Camera mainCam;
     [SerializeField] BoxCollider arrowsCollider;
     GameObject trackedObject;
-    Collider trackedCollider;
+    BoxCollider trackedCollider;
     RectTransform rect;
     CanvasGroup canvasGroup;
     float timer = 0; 
@@ -23,7 +23,7 @@ public class RotationUIPanel : MonoBehaviour
     private void Start()
     {
         trackedObject = transform.parent.gameObject;
-        trackedCollider = trackedObject.GetComponent<Collider>();
+        trackedCollider = trackedObject.GetComponent<BoxCollider>();
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();  
 
@@ -31,6 +31,10 @@ public class RotationUIPanel : MonoBehaviour
             arrowsCollider = GetComponent<BoxCollider>();    
 
         SizeToCollider();        
+        if (trackedObject && trackedCollider)
+        {
+            Debug.Log($"Found both TRACKED OBJ and TRACKED COLL");
+        }
     }
 
     private void OnEnable() 
@@ -87,10 +91,11 @@ public class RotationUIPanel : MonoBehaviour
     {
         if (trackedCollider)
         {
-            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, trackedCollider.bounds.size.x * 1.12f);
-            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, trackedCollider.bounds.size.y * 1.12f);
-            arrowsCollider.size = new Vector3(trackedCollider.bounds.size.x * 1.12f, trackedCollider.bounds.size.y * 1.12f, 0.1f);
-             Debug.Log($"Sized rotation indicator!!!");;
+            float scaleVal = Mathf.Max(trackedCollider.size.x, trackedCollider.size.y);
+            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, scaleVal * 2f);
+            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, scaleVal * 2);
+            arrowsCollider.size = new Vector3(scaleVal * 2f, scaleVal * 2f, 0.1f);
+            Debug.Log($"Sized rotation indicator!!!");
         }        
     }
 

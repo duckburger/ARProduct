@@ -98,7 +98,7 @@ public class ARObjectSelector : MonoBehaviour
             if (hitObject && hitObject.transform.localPosition.y != objectOriginalY)
                 LowerObject(hitObject);
             if (selectedObjectRotataionIndicator)
-                selectedObjectRotataionIndicator.Enable(true);
+                selectedObjectRotataionIndicator.Enable(false);
             
             movingObject = false;
             DestroyHoldIndicator();

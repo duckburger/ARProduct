@@ -38,13 +38,13 @@ public class Scaler : MonoBehaviour
     {
         if (!sessionOrigin || !spawnedObject)
         {
-            Debug.LogError($"Connect components to the scaler");
+            Debug.LogError($"Connect components to the Scaler");
             return;
         }
 
-        // sessionOrigin.MakeContentAppearAt(spawnedObject, spawnedObject.position, spawnedObject.rotation);
-        Vector3 targetScale = new Vector3(value, value, value);
-        LeanTween.scale(sessionOrigin.gameObject, targetScale, 0.15f).setEase(LeanTweenType.easeInOutBounce);
+        Vector3 newTargetScale = new Vector3(value, value, value);
+        sessionOrigin.MakeContentAppearAt(spawnedObject, spawnedObject.position, spawnedObject.rotation);
+        LeanTween.scale(sessionOrigin.gameObject, newTargetScale, 0.13f).setEase(LeanTweenType.easeOutBack);
     }
     
 }
