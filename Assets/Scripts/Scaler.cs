@@ -1,0 +1,50 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+
+public class Scaler : MonoBehaviour
+{
+    [SerializeField] ARSessionOrigin sessionOrigin;
+    [SerializeField] Transform spawnedObject;
+
+    CanvasGroup canvasGroup;
+
+    private void Start()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    public void AnimateIn()
+    {
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.interactable = true;
+        LeanTween.alphaCanvas(canvasGroup, 1, 0.23f);
+    }
+
+    public void AnimateOut()
+    {
+        canvasGroup.blocksRaycasts = false;
+        canvasGroup.interactable = false;
+        LeanTween.alphaCanvas(canvasGroup, 0, 0.15f);
+    }
+
+    public void AssignSpawnedObject(Transform obj)
+    {
+        spawnedObject = obj;
+    }
+
+    public void ApplyScale(float value)
+    {
+        if (!sessionOrigin || !spawnedObject)
+        {
+            Debug.LogError($"Connect components to the scaler");
+            return;
+        }
+
+        sessionOrigin.MakeContentAppearAt(spawnedObject, spawnedObject.position, spawnedObject.rotation);
+        Vector3 targetScale = new Vector3(value, value, value);
+        LeanTween.scale(sessionOrigin.gameObject, targetScale, 0.12f).setEase(LeanTweenType.easeInOutBounce);
+    }
+    
+}
