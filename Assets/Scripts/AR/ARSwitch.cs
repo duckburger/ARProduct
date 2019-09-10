@@ -5,60 +5,22 @@ using UnityEngine.XR.ARFoundation;
 
 public class ARSwitch : MonoBehaviour
 {
-    [SerializeField] GameObject regularCamera;
-    [Space]
-    [SerializeField] GameObject session;
-    [SerializeField] GameObject sessionOrigin;  
-    [SerializeField] GameObject arUI;
-    [SerializeField] GameObject threeDObject;
-    [SerializeField] GameObject arLight;
-    [SerializeField] Scaler scaler;
-    ARSession sessionController;
-    ARSessionOrigin sessionOriginController;
-    UIManager uiController;
-    
-    private void Start()
-    {
-        sessionController = session.GetComponent<ARSession>();
-        sessionOriginController = sessionOrigin.GetComponent<ARSessionOrigin>();
-        uiController = arUI.GetComponent<UIManager>();
-    }
+    [SerializeField] GameObject arObject;
+    [SerializeField] GameObject threedDObject;
 
-    public void Toggle()
+
+    public void ToggleAR()
     {
-        if (session.gameObject.activeSelf)
+        if (arObject.activeSelf)
         {
-            DisableAR();
+            arObject.SetActive(false);
+            threedDObject.SetActive(true);
         }
         else
         {
-            EnableAR();
+            arObject.SetActive(true);
+            threedDObject.SetActive(false);
         }
-    }
-
-    public void EnableAR()
-    {
-        session.SetActive(true);
-        sessionOrigin.SetActive(true);
-        sessionOrigin.GetComponent<ARPlaneManager>().enabled = true;
-        sessionOrigin.GetComponent<ARPointCloudManager>().enabled = true;
-        arUI.SetActive(true);
-        regularCamera.SetActive(false);
-        threeDObject.SetActive(false);
-        arLight.SetActive(true);
-    }
-
-    public void DisableAR()
-    {
-        session.SetActive(false);
-        sessionOrigin.SetActive(false);
-        arUI.SetActive(false);
-        uiController?.Reset();
-        regularCamera.SetActive(true);
-        threeDObject.SetActive(true);
-        arLight.SetActive(false);
-        
-        sessionOrigin.GetComponent<PlaceOnPlane>().Reset();
     }
     
 }

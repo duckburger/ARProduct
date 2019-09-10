@@ -52,8 +52,7 @@ public class ARObjectSelector : MonoBehaviour
                     spawnedArch.SetFillValue(normalizedTimer);
                     holdingOverObject = true;
                     hitObject = hit.collider.gameObject;   
-                    selectedObjectRotataionIndicator = hitObject.transform.GetChild(0).GetComponent<RotationUIPanel>();
-                    selectedObjectRotataionIndicator?.Enable(false);
+                    selectedObjectRotataionIndicator = hitObject.transform.GetComponentInChildren<RotationUIPanel>();
                     objectOriginalY = hitObject.transform.localPosition.y;             
                     timer += Time.deltaTime;
                     normalizedTimer = timer / timeToActivate;
@@ -68,16 +67,13 @@ public class ARObjectSelector : MonoBehaviour
                 {
                     DestroyHoldIndicator();
                     LowerObject(hitObject);
-                    if (selectedObjectRotataionIndicator)
-                        selectedObjectRotataionIndicator.Enable(true);
+
                 }            
             }
             else
             {       
                 if (!movingObject)
                 {
-                    if (selectedObjectRotataionIndicator)
-                        selectedObjectRotataionIndicator.Enable(true);
                     DestroyHoldIndicator();
                     timer = 0;
                     normalizedTimer = 0;
@@ -97,8 +93,6 @@ public class ARObjectSelector : MonoBehaviour
                 LeanTween.cancel(hitObject);
             if (hitObject && hitObject.transform.localPosition.y != objectOriginalY)
                 LowerObject(hitObject);
-            if (selectedObjectRotataionIndicator)
-                selectedObjectRotataionIndicator.Enable(false);
             
             movingObject = false;
             DestroyHoldIndicator();
@@ -156,6 +150,9 @@ public class ARObjectSelector : MonoBehaviour
         if (!hitObject)
             return;
         Debug.Log($"Lifting object");
+
+        if (selectedObjectRotataionIndicator)
+            selectedObjectRotataionIndicator?.Enable(false);
         LeanTween.moveLocalY(obj, objectOriginalY + floatingHeight, 0.23f).setEase(LeanTweenType.easeInOutSine);
         movingObject = true;
     }
@@ -165,7 +162,13 @@ public class ARObjectSelector : MonoBehaviour
         if (!hitObject)
             return;
         Debug.Log($"Lowering object");
-        LeanTween.moveLocalY(obj, objectOriginalY, 0.1f).setEase(LeanTweenType.easeInOutSine);
+        
+        LeanTween.moveLocalY(obj, objectOriginalY, 0.1f).setEase(LeanTweenType.easeInOutSine)
+            .setOnComplete(() => 
+            {
+                if (selectedObjectRotataionIndicator)
+                    selectedObjectRotataionIndicator?.Enable(true);
+            });
         movingObject = false;
     }
 

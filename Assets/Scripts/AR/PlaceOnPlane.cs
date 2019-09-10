@@ -18,6 +18,9 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField] Scaler scaler;
     [Space(10)]
     [SerializeField] GameObject m_PlacedPrefab;
+    [SerializeField] GameObject rotationIndicator;
+    [SerializeField] GameObject shadowQuad;
+    [Space(10)]
 
     ARPlaneManager planeManager;
     ARPointCloudManager cloudManager;
@@ -34,6 +37,8 @@ public class PlaceOnPlane : MonoBehaviour
     /// <summary>
     /// The object instantiated as a result of a successful raycast intersection with a plane.
     /// </summary>
+    
+    [Space(15)]
     public GameObject spawnedObject;
 
     void Awake()
@@ -73,22 +78,11 @@ public class PlaceOnPlane : MonoBehaviour
         {
             // Raycast hits are sorted by distance, so the first one
             // will be the closest hit.
-            var hitPose = s_Hits[0].pose;
+            Pose hitPose = s_Hits[0].pose;
 
             if (spawnedObject == null)
             {
-                spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
-                scaler?.AssignSpawnedObject(spawnedObject.transform);
-                scaler?.AnimateIn();
-                scaler?.ApplyScale(1.3f);
-                onPlacedObject?.Invoke();
-
-                planeManager.enabled = false;
-                cloudManager.enabled = false;
-
-                DeletePlanes();
-                DeleteClouds();
-  
+                SpawnARObject(hitPose);
             }            
         }
     }
@@ -109,12 +103,62 @@ public class PlaceOnPlane : MonoBehaviour
         }
     }
 
-    public void TestSpawn()
+    public void TestSpawnObject()
     {
-        spawnedObject = Instantiate(m_PlacedPrefab, Vector3.zero, Quaternion.identity);
+        SpawnARObject(new Pose(Vector3.zero, Quaternion.identity));
+    }
+
+    public void SpawnARObject(Pose hitPose)
+    {
+        spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
         scaler?.AssignSpawnedObject(spawnedObject.transform);
         scaler?.AnimateIn();
+        scaler?.ApplyScale(1.3f);
+
+        SpawnRotator();
+        SpawnShadowPlane();
+
         onPlacedObject?.Invoke();
+
+        planeManager.enabled = false;
+        cloudManager.enabled = false;
+
+        DeletePlanes();
+        DeleteClouds();
+    }
+
+    void SpawnRotator()
+    {
+        if (!rotationIndicator)
+        {
+            Debug.LogError($"No rotation indicator connected to PlaceOnPlane");
+            return;
+        }
+
+        GameObject rotIndicator = Instantiate(rotationIndicator, spawnedObject.transform);
+        rotIndicator.transform.localPosition = new Vector3(0, 0.022f, 0);
+        Camera mainCamera = GetComponent<ARSessionOrigin>().camera;
+        Canvas canv = rotIndicator.GetComponent<Canvas>();
+        canv.worldCamera = mainCamera;
+        RotationUIPanel panelController = rotIndicator.GetComponent<RotationUIPanel>();
+        panelController.AssignRefences(spawnedObject, mainCamera);
+    }
+
+    void SpawnShadowPlane()
+    {
+        if (!shadowQuad)
+        {
+            Debug.LogError($"No shadow quad connected to PlaceOnPlane");
+            return;
+        }
+
+        GameObject shadowPlane = Instantiate(shadowQuad, spawnedObject.transform);
+        shadowPlane.transform.localPosition = new Vector3(0, 0.02f, 0);
+    }
+        
+    private void OnDisable() 
+    {
+        Reset();    
     }
 
     public void Reset()
