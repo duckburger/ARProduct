@@ -9,6 +9,22 @@ public class ARLightEstimation : MonoBehaviour
     [SerializeField] Light lightToAffect;
     [SerializeField] ARCameraManager cameraManager;
 
+    /// <summary>
+    /// The estimated brightness of the physical environment, if available.
+    /// </summary>
+    public float? brightness { get; private set; }
+
+    /// <summary>
+    /// The estimated color temperature of the physical environment, if available.
+    /// </summary>
+    public float? colorTemperature { get; private set; }
+
+    /// <summary>
+    /// The estimated color correction value of the physical environment, if available.
+    /// </summary>
+    public Color? colorCorrection { get; private set; }
+
+
     private void Start()
     {
         if (!cameraManager)
@@ -27,7 +43,10 @@ public class ARLightEstimation : MonoBehaviour
 
     void AcceptLightEstimation(ARCameraFrameEventArgs arguments)
     {
-        lightToAffect.intensity = (float)arguments.lightEstimation.averageBrightness;
-        lightToAffect.color = (Color)arguments.lightEstimation.colorCorrection;
+        brightness = arguments.lightEstimation.averageBrightness.Value;
+        colorCorrection = arguments.lightEstimation.colorCorrection.Value;
+
+        lightToAffect.intensity = brightness.Value;
+        lightToAffect.color = colorCorrection.Value;
     }
 }
