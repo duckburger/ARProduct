@@ -42,9 +42,9 @@ public class Scaler : MonoBehaviour
             return;
         }
 
-        sessionOrigin.MakeContentAppearAt(spawnedObject, spawnedObject.position, spawnedObject.rotation);
+        // sessionOrigin.MakeContentAppearAt(spawnedObject, spawnedObject.position, spawnedObject.rotation);
         Vector3 targetScale = new Vector3(value, value, value);
-        LeanTween.scale(sessionOrigin.gameObject, targetScale, 0.12f).setEase(LeanTweenType.easeInOutBounce);
+        LeanTween.scale(sessionOrigin.gameObject, targetScale, 0.15f).setEase(LeanTweenType.easeInOutBounce);
     }
     
 }

@@ -275,7 +275,6 @@ GameObject:
   - component: {fileID: 926504788}
   - component: {fileID: 926504787}
   - component: {fileID: 926504792}
-  - component: {fileID: 926504791}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: Untagged
@@ -355,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FocusMode: 1
-  m_LightEstimationMode: 1
+  m_LightEstimationMode: 0
 --- !u!114 &926504789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,7 +372,7 @@ MonoBehaviour:
   m_PoseProviderComponent: {fileID: 0}
   m_TrackingType: 0
   m_UpdateType: 0
-  m_UseRelativeTransform: 0
+  m_UseRelativeTransform: 1
 --- !u!4 &926504790
 Transform:
   m_ObjectHideFlags: 0
@@ -388,20 +387,6 @@ Transform:
   m_Father: {fileID: 1805255567}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &926504791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926504785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0c91d0a8248e5d4686edc3854578987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightToAffect: {fileID: 1179867030}
-  cameraManager: {fileID: 926504788}
 --- !u!114 &926504792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,8 +534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c512cbbaf82214288ebcce23bf6a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraManager: {fileID: 0}
-  m_PlaneManager: {fileID: 0}
+  m_CameraManager: {fileID: 926504788}
+  m_PlaneManager: {fileID: 1805255568}
   m_MoveDeviceAnimation: {fileID: 2035949152}
   m_TapToPlaceAnimation: {fileID: 2035949150}
 --- !u!114 &1162374469
@@ -1484,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6460b32cfedfa4dac4b0a88283e89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatingHeight: 1.8
+  floatingHeight: 0.3
   timeToActivate: 2.3
   uiCanvas: {fileID: 1149660319}
   hitObject: {fileID: 0}
