@@ -46,7 +46,9 @@ public class ARLightEstimation : MonoBehaviour
         brightness = arguments.lightEstimation.averageBrightness.Value;
         colorCorrection = arguments.lightEstimation.colorCorrection.Value;
 
-        lightToAffect.intensity = brightness.Value;
-        lightToAffect.color = colorCorrection.Value;
+        if (arguments.lightEstimation.averageBrightness.HasValue)
+            lightToAffect.intensity = brightness.Value;
+        if (arguments.lightEstimation.colorCorrection.HasValue)
+            lightToAffect.color = colorCorrection.Value;
     }
 }

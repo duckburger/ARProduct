@@ -111,7 +111,7 @@ public class UIManager : MonoBehaviour
         if (planeManager == null)
             return false;
 
-        Debug.Log($"<color=red>Found plane manager</color> als found {planeManager.trackables.count} planes");
+        Debug.Log($"<color=red>Found plane manager</color> also found {planeManager.trackables.count} planes");
         return planeManager.trackables.count > 0;
     }
 

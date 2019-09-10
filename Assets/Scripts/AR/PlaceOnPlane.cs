@@ -85,6 +85,10 @@ public class PlaceOnPlane : MonoBehaviour
 
                 planeManager.enabled = false;
                 cloudManager.enabled = false;
+
+                DeletePlanes();
+                DeleteClouds();
+  
             }            
         }
     }

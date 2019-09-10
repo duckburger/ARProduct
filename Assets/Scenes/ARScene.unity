@@ -527,7 +527,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AttemptUpdate: 1
-  m_MatchFrameRate: 1
 --- !u!4 &817217149
 Transform:
   m_ObjectHideFlags: 0
@@ -974,7 +973,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: -180
     m_MaxValue: 180
     m_Wrap: 1
@@ -1563,7 +1562,6 @@ GameObject:
   - component: {fileID: 1338134726}
   - component: {fileID: 1338134725}
   - component: {fileID: 1338134724}
-  - component: {fileID: 1338134728}
   - component: {fileID: 1338134729}
   m_Layer: 0
   m_Name: AR Camera
@@ -1644,7 +1642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FocusMode: 1
-  m_LightEstimationMode: 1
+  m_LightEstimationMode: 0
 --- !u!114 &1338134726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,7 +1660,7 @@ MonoBehaviour:
   m_PoseProviderComponent: {fileID: 0}
   m_TrackingType: 0
   m_UpdateType: 0
-  m_UseRelativeTransform: 0
+  m_UseRelativeTransform: 1
 --- !u!4 &1338134727
 Transform:
   m_ObjectHideFlags: 0
@@ -1677,20 +1675,6 @@ Transform:
   m_Father: {fileID: 1453786088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1338134728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338134722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0c91d0a8248e5d4686edc3854578987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightToAffect: {fileID: 1700448504}
-  cameraManager: {fileID: 1338134725}
 --- !u!114 &1338134729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,7 +1904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 1585201990951412, guid: 617b10198100d44078c5e70d97423117,
     type: 3}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!114 &1453786087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2016,7 +2000,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
