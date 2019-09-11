@@ -10,7 +10,7 @@ public class Scaler : MonoBehaviour
 
     CanvasGroup canvasGroup;
 
-    private void Start()
+    private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
     }

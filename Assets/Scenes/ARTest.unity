@@ -481,7 +481,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526978673}
-  m_LocalRotation: {x: 0.08639658, y: 0.70180887, z: -0.086396605, w: 0.70180887}
+  m_LocalRotation: {x: 0.086396605, y: 0.70180887, z: -0.08639663, w: 0.70180887}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1526,6 +1526,7 @@ GameObject:
   - component: {fileID: 1659712199}
   - component: {fileID: 1659712201}
   - component: {fileID: 1659712200}
+  - component: {fileID: 1659712202}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1672,6 +1673,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659712198}
   m_CullTransparentMesh: 0
+--- !u!225 &1659712202
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659712198}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1661620147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564df7a36d3679b47bf764ca2883e41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonText: {fileID: 1659712200}
   arObject: {fileID: 224200169}
   threedDObject: {fileID: 1325938304}
 --- !u!114 &1661620150
@@ -1844,7 +1858,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749469524}
-  m_LocalRotation: {x: 0.08639661, y: 0.70180887, z: -0.08639661, w: 0.70180887}
+  m_LocalRotation: {x: 0.0863966, y: 0.70180887, z: -0.0863966, w: 0.70180887}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
