@@ -46,5 +46,17 @@ public class Scaler : MonoBehaviour
         sessionOrigin.MakeContentAppearAt(spawnedObject, spawnedObject.position, spawnedObject.rotation);
         LeanTween.scale(sessionOrigin.gameObject, newTargetScale, 0.13f).setEase(LeanTweenType.easeOutBack);
     }
-    
+
+
+    private void OnEnable()
+    {
+        AssignSpawnedObject(null);
+        canvasGroup.alpha = 0;
+    }
+
+    private void OnDisable()
+    {
+        AssignSpawnedObject(null);
+        AnimateOut();
+    }
 }

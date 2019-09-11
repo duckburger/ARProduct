@@ -67,8 +67,19 @@ public class UIManager : MonoBehaviour
 
     bool m_ShowingMoveDevice = true;
 
-    
-    void OnEnable()
+    private void OnEnable()
+    {
+        Disable();
+        Enable();
+    }
+
+    private void OnDisable()
+    {
+        Disable();
+        Enable();
+    }
+
+    public void Enable()
     {
         if (m_CameraManager != null)
             m_CameraManager.frameReceived += FrameChanged;
@@ -77,12 +88,13 @@ public class UIManager : MonoBehaviour
         Debug.Log($"Registered UI on frame event");
     }
 
-    void OnDisable()
+    public void Disable()
     {
         if (m_CameraManager != null)
             m_CameraManager.frameReceived -= FrameChanged;
 
         placeOnPlane.onPlacedObject -= PlacedObject;
+        PlacedObject();
     }
 
     public void Reset()

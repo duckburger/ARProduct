@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7685847439633639199}
   - component: {fileID: 2113379194056931742}
   - component: {fileID: 5837219378255602859}
+  - component: {fileID: 4246751867868207085}
   m_Layer: 0
   m_Name: ShadowQuad
   m_TagString: Untagged
@@ -78,3 +79,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4246751867868207085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5434071648928739832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5d41359b2bf4586a6e4d756e746990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

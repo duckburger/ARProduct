@@ -7,6 +7,8 @@ public class TouchRotate : MonoBehaviour
 {
     float lastXValue;
     float lastYValue;
+
+    [SerializeField] CinemachineFreeLook freelookCam;
     private void Start()
     {
         CinemachineCore.GetInputAxis = HandleAxisInputDelegate;
@@ -45,7 +47,9 @@ public class TouchRotate : MonoBehaviour
                  }
 
                  return 0;
- 
+
+            case "Mouse ScrollWheel":
+                return Input.GetAxis(axisName);
              default:
                  Debug.LogError("Input <"+axisName+"> not recognyzed.",this);
                  break;

@@ -161,14 +161,17 @@ public class PlaceOnPlane : MonoBehaviour
         Reset();    
     }
 
+    private void OnEnable()
+    {
+        Reset();
+    }
+
     public void Reset()
     {
         if (spawnedObject)
         {
             Destroy(spawnedObject);
-            spawnedObject = null;
-            scaler?.AssignSpawnedObject(null);
-            scaler?.AnimateOut();
+            spawnedObject = null;         
             planeManager.enabled = true;
             cloudManager.enabled = true;
         }

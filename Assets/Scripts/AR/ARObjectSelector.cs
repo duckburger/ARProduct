@@ -10,24 +10,30 @@ public class ARObjectSelector : MonoBehaviour
     [SerializeField] float floatingHeight = 1.8f;
     [SerializeField] float timeToActivate = 2.3f;
     [SerializeField] Canvas uiCanvas;
-    Camera arCamera;
+    [SerializeField] Camera arCamera;
+    [SerializeField] ARRaycastManager arRaycaster;
     [SerializeField] GameObject hitObject;
     
     [SerializeField] bool holdingOverObject = false;
     [Space]
     [SerializeField] GameObject uiArchPrefab;
 
-    ARRaycastManager arRaycaster;    
     FillArch spawnedArch;
     RotationUIPanel selectedObjectRotataionIndicator;
+    Transform shadowQuad;
     float objectOriginalY = 0;
     float timer = 0;
     float normalizedTimer = 0;
     bool movingObject = false;
+
     private void OnEnable() 
     {
-        arCamera = transform.GetChild(0).GetComponent<Camera>();
-        arRaycaster = GetComponent<ARRaycastManager>();
+        if (!arCamera)
+            arCamera = transform.GetChild(0).GetComponent<Camera>();
+        if (!arRaycaster)
+            arRaycaster = GetComponent<ARRaycastManager>();
+
+        Reset();
     }
 
     private void Update()
@@ -52,7 +58,8 @@ public class ARObjectSelector : MonoBehaviour
                     spawnedArch.SetFillValue(normalizedTimer);
                     holdingOverObject = true;
                     hitObject = hit.collider.gameObject;   
-                    selectedObjectRotataionIndicator = hitObject.transform.GetComponentInChildren<RotationUIPanel>();
+                    selectedObjectRotataionIndicator = hitObject.GetComponentInChildren<RotationUIPanel>();
+                    shadowQuad = hitObject.GetComponentInChildren<ARShadowQuad>().transform;
                     objectOriginalY = hitObject.transform.localPosition.y;             
                     timer += Time.deltaTime;
                     normalizedTimer = timer / timeToActivate;
@@ -99,15 +106,20 @@ public class ARObjectSelector : MonoBehaviour
                 LeanTween.cancel(hitObject);
             if (hitObject && hitObject.transform.localPosition.y != objectOriginalY)
                 LowerObject(hitObject);
-            
-            movingObject = false;
-            DestroyHoldIndicator();
-            timer = 0;
-            normalizedTimer = 0;
-            hitObject = null;
-            holdingOverObject = false;
-            objectOriginalY = 0; 
-        }     
+
+            Reset();
+        }
+    }
+
+    private void Reset()
+    {
+        movingObject = false;
+        DestroyHoldIndicator();
+        timer = 0;
+        normalizedTimer = 0;
+        hitObject = null;
+        holdingOverObject = false;
+        objectOriginalY = 0;
     }
 
     private void DestroyHoldIndicator()
@@ -160,6 +172,8 @@ public class ARObjectSelector : MonoBehaviour
         if (selectedObjectRotataionIndicator)
             selectedObjectRotataionIndicator?.Enable(false);
         LeanTween.moveLocalY(obj, objectOriginalY + floatingHeight, 0.23f).setEase(LeanTweenType.easeInOutSine);
+        if (shadowQuad)
+            LeanTween.moveLocalY(shadowQuad.gameObject, shadowQuad.localPosition.y - floatingHeight, 0.23f).setEase(LeanTweenType.easeInOutSine);
         movingObject = true;
     }
 
@@ -175,6 +189,8 @@ public class ARObjectSelector : MonoBehaviour
                 if (selectedObjectRotataionIndicator)
                     selectedObjectRotataionIndicator?.Enable(true);
             });
+        if (shadowQuad)
+            LeanTween.moveLocalY(shadowQuad.gameObject, 0.02f, 0.1f).setEase(LeanTweenType.easeInOutSine);
         movingObject = false;
     }
 
