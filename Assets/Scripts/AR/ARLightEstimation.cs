@@ -43,12 +43,20 @@ public class ARLightEstimation : MonoBehaviour
 
     void AcceptLightEstimation(ARCameraFrameEventArgs arguments)
     {
-        brightness = arguments.lightEstimation.averageBrightness.Value;
-        colorCorrection = arguments.lightEstimation.colorCorrection.Value;
+        
+        
 
         if (arguments.lightEstimation.averageBrightness.HasValue)
+        {
+            brightness = arguments.lightEstimation.averageBrightness.Value;
             lightToAffect.intensity = brightness.Value;
+        }
+            
         if (arguments.lightEstimation.colorCorrection.HasValue)
+        {
             lightToAffect.color = colorCorrection.Value;
+            colorCorrection = arguments.lightEstimation.colorCorrection.Value;
+        }
+            
     }
 }

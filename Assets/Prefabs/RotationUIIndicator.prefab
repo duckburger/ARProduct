@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disappearAfterSec: 3
-  rotationSpeed: 8
+  rotationSpeed: 3.5
   mainCam: {fileID: 0}
   arrowsCollider: {fileID: 545447748718417236}
   trackedObject: {fileID: 0}

@@ -63,28 +63,34 @@ public class ARObjectSelector : MonoBehaviour
                         LiftObject(hitObject);            
                     }
                 }    
-                else if (spawnedArch)
+                else 
                 {
-                    DestroyHoldIndicator();
-                    LowerObject(hitObject);
-
+                    if (spawnedArch)
+                    {
+                        DestroyHoldIndicator();
+                        LowerObject(hitObject);
+                    }
+                    if (movingObject)
+                        MoveObject();
                 }            
             }
             else
-            {       
-                if (!movingObject)
-                {
-                    DestroyHoldIndicator();
-                    timer = 0;
-                    normalizedTimer = 0;
-                    hitObject = null;
-                    holdingOverObject = false;
-                    objectOriginalY = 0; 
-                }
-                else
-                {
+            {
+                if (movingObject)
                     MoveObject();
-                }                    
+                //if (!movingObject)
+                //{
+                //    DestroyHoldIndicator();
+                //    timer = 0;
+                //    normalizedTimer = 0;
+                //    hitObject = null;
+                //    holdingOverObject = false;
+                //    objectOriginalY = 0; 
+                //}
+                //else
+                //{
+                //    MoveObject();
+                //}                    
             }
         }   
         else

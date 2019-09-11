@@ -169,6 +169,8 @@ public class PlaceOnPlane : MonoBehaviour
             spawnedObject = null;
             scaler?.AssignSpawnedObject(null);
             scaler?.AnimateOut();
+            planeManager.enabled = true;
+            cloudManager.enabled = true;
         }
     }
 
