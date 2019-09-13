@@ -17,7 +17,7 @@ namespace Cinemachine
 		[Tooltip("The zoom axis.  Value is 0..1.  How much to scale the orbits")]
 		[AxisStateProperty]
 		public AxisState zAxis = new AxisState(0, 1, false, true, 50f, 0.1f, 0.1f, "Mouse ScrollWheel", false);
-
+        float scale;
 		void OnValidate()
 		{
 			minScale = Mathf.Max(0.01f, minScale);
@@ -39,6 +39,7 @@ namespace Cinemachine
                 SaveDuringPlay.SaveDuringPlay.OnHotSave -= RestoreOriginalOrbits;
                 SaveDuringPlay.SaveDuringPlay.OnHotSave += RestoreOriginalOrbits;
 #endif
+                scale = 1;
 			}
 		}
 
@@ -66,7 +67,33 @@ namespace Cinemachine
 			if (originalOrbits != null)
 			{
 				zAxis.Update(Time.deltaTime);
-				float scale = Mathf.Lerp(minScale, maxScale, zAxis.Value);
+                if (Input.touchCount == 2)
+                {           
+                    Touch touchZero = Input.GetTouch(0);
+                    Touch touchOne = Input.GetTouch(1);
+
+                    // Find the position in the previous frame of each touch.
+                    Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+                    Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+                    // Find the magnitude of the vector (the distance) between the touches in each frame.
+                    float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+                    float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+                    // Find the difference in the distances between each frame.
+                    float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+                    scale = Mathf.Lerp(scale, scale + deltaMagnitudeDiff / 8f * Time.deltaTime, Time.deltaTime * 5f);
+                    scale = Mathf.Clamp(scale, minScale, maxScale);
+                }
+                else 
+                {
+#if !UNITY_IOS
+                    Debug.Log($"Z Axis is {zAxis.Value}");
+                    scale = Mathf.Lerp(minScale, maxScale, zAxis.Value);
+#endif
+                }
+
+                Debug.LogError($"Scale is {scale}");
 				for (int i = 0; i < originalOrbits.Length; i++)
 				{
 					freelook.m_Orbits[i].m_Height = originalOrbits[i].m_Height * scale;

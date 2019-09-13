@@ -6,7 +6,8 @@ using UnityEngine.XR.ARFoundation;
 
 [RequireComponent(typeof(ARSessionOrigin))]
 public class ARObjectSelector : MonoBehaviour
-{    
+{
+    [SerializeField] float activationDelay = 0.23f;
     [SerializeField] float floatingHeight = 1.8f;
     [SerializeField] float timeToActivate = 2.3f;
     [SerializeField] Canvas uiCanvas;
@@ -26,6 +27,7 @@ public class ARObjectSelector : MonoBehaviour
     float normalizedTimer = 0;
     bool movingObject = false;
 
+    float preHoldTimer = 0;
     private void OnEnable() 
     {
         if (!arCamera)
@@ -47,6 +49,10 @@ public class ARObjectSelector : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
+                preHoldTimer += Time.deltaTime;
+                if (preHoldTimer < activationDelay)
+                    return;
+
                 if (!movingObject && hit.collider.gameObject.layer == 8)
                 {
                     if (!spawnedArch)
@@ -84,20 +90,7 @@ public class ARObjectSelector : MonoBehaviour
             else
             {
                 if (movingObject)
-                    MoveObject();
-                //if (!movingObject)
-                //{
-                //    DestroyHoldIndicator();
-                //    timer = 0;
-                //    normalizedTimer = 0;
-                //    hitObject = null;
-                //    holdingOverObject = false;
-                //    objectOriginalY = 0; 
-                //}
-                //else
-                //{
-                //    MoveObject();
-                //}                    
+                    MoveObject();                  
             }
         }   
         else
@@ -116,6 +109,7 @@ public class ARObjectSelector : MonoBehaviour
         movingObject = false;
         DestroyHoldIndicator();
         timer = 0;
+        preHoldTimer = 0;
         normalizedTimer = 0;
         hitObject = null;
         holdingOverObject = false;
