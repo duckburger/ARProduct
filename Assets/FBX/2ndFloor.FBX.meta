@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: c731f77170f9d8b4990ce60a5ad10398
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 2ndFL_Bedroom01_Floor
+    100002: 2ndFL_Bedroom01_Wall
+    100004: 2ndFL_Bedroom02_FLoor
+    100006: 2ndFL_Bedroom02_Wall
+    100008: 2ndFL_BedroomMB_Floor
+    100010: 2ndFL_BedroomMB_Wall
+    100012: 2ndFL_ExtWall
+    100014: 2ndFL_FloorHallway_Floor
+    100016: 2ndFL_FloorHallway_Wall
+    100018: 2ndFL_Foyer
+    100020: 2ndFL_HallwayRailing_Glass_01
+    100022: 2ndFL_HallwayRailing_Glass_02
+    100024: 2ndFL_HallwayRailing_Glass_03
+    100026: 2ndFL_HallwayRailing_Glass_05
+    100028: 2ndFL_Mullions
+    100030: 2ndFL_Mullions 1
+    100032: 2ndFL_Mullions 2
+    100034: 2ndFL_Mullions 3
+    100036: 2ndFL_Mullions 4
+    100038: 2ndFL_Mullions 5
+    100040: 2ndFL_Mullions 6
+    100042: 2ndFL_Section
+    100044: 2ndFL_Staircase_WoodRailing
+    100046: 2ndFL_Stairs
+    100048: 2ndFL_Washroom_Floor
+    100050: 2ndFL_Washroom_Wall
+    100052: 2ndFL_WindowSill
+    100054: 2ndFL_WinGlass
+    100056: 2ndFL_WinGlass 1
+    100058: 2ndFL_WinGlass 2
+    100060: 2ndFL_WinGlass 3
+    100062: 2ndFL_WinGlass 4
+    100064: 2ndFL_WinGlass 5
+    100066: 2ndFL_WinGlass 6
+    100068: 2ndFL_WoodFacade_01
+    100070: 2ndFL_WoodFacade_02
+    100072: //RootNode
+    100074: 2ndFloor_Bedroom03_Floor
+    100076: 2ndFloor_Bedroom03_Wall
+    100078: 2ndFloor_WashroomMB_Floor
+    100080: 2ndFloor_WashroomMB_Wall
+    100082: Fascia
+    100084: MainEntrance_Roof
+    100086: MainEntrance_Roof001
+    100088: Shingles
+    100090: Staircase_GlassRailing
+    400000: 2ndFL_Bedroom01_Floor
+    400002: 2ndFL_Bedroom01_Wall
+    400004: 2ndFL_Bedroom02_FLoor
+    400006: 2ndFL_Bedroom02_Wall
+    400008: 2ndFL_BedroomMB_Floor
+    400010: 2ndFL_BedroomMB_Wall
+    400012: 2ndFL_ExtWall
+    400014: 2ndFL_FloorHallway_Floor
+    400016: 2ndFL_FloorHallway_Wall
+    400018: 2ndFL_Foyer
+    400020: 2ndFL_HallwayRailing_Glass_01
+    400022: 2ndFL_HallwayRailing_Glass_02
+    400024: 2ndFL_HallwayRailing_Glass_03
+    400026: 2ndFL_HallwayRailing_Glass_05
+    400028: 2ndFL_Mullions
+    400030: 2ndFL_Mullions 1
+    400032: 2ndFL_Mullions 2
+    400034: 2ndFL_Mullions 3
+    400036: 2ndFL_Mullions 4
+    400038: 2ndFL_Mullions 5
+    400040: 2ndFL_Mullions 6
+    400042: 2ndFL_Section
+    400044: 2ndFL_Staircase_WoodRailing
+    400046: 2ndFL_Stairs
+    400048: 2ndFL_Washroom_Floor
+    400050: 2ndFL_Washroom_Wall
+    400052: 2ndFL_WindowSill
+    400054: 2ndFL_WinGlass
+    400056: 2ndFL_WinGlass 1
+    400058: 2ndFL_WinGlass 2
+    400060: 2ndFL_WinGlass 3
+    400062: 2ndFL_WinGlass 4
+    400064: 2ndFL_WinGlass 5
+    400066: 2ndFL_WinGlass 6
+    400068: 2ndFL_WoodFacade_01
+    400070: 2ndFL_WoodFacade_02
+    400072: //RootNode
+    400074: 2ndFloor_Bedroom03_Floor
+    400076: 2ndFloor_Bedroom03_Wall
+    400078: 2ndFloor_WashroomMB_Floor
+    400080: 2ndFloor_WashroomMB_Wall
+    400082: Fascia
+    400084: MainEntrance_Roof
+    400086: MainEntrance_Roof001
+    400088: Shingles
+    400090: Staircase_GlassRailing
+    2100000: Roof
+    2100002: WindowFrames
+    2100004: WindowGlass
+    2100006: FloorWoodTile
+    2100008: WallInt
+    2100010: Stairs
+    2100012: WallsExterior
+    2100014: Section
+    2100016: WindowSill
+    2100018: WoodFacade
+    2100020: 'Material #90'
+    2300000: 2ndFL_Bedroom01_Floor
+    2300002: 2ndFL_Bedroom01_Wall
+    2300004: 2ndFL_Bedroom02_FLoor
+    2300006: 2ndFL_Bedroom02_Wall
+    2300008: 2ndFL_BedroomMB_Floor
+    2300010: 2ndFL_BedroomMB_Wall
+    2300012: 2ndFL_ExtWall
+    2300014: 2ndFL_FloorHallway_Floor
+    2300016: 2ndFL_FloorHallway_Wall
+    2300018: 2ndFL_Foyer
+    2300020: 2ndFL_HallwayRailing_Glass_01
+    2300022: 2ndFL_HallwayRailing_Glass_02
+    2300024: 2ndFL_HallwayRailing_Glass_03
+    2300026: 2ndFL_HallwayRailing_Glass_05
+    2300028: 2ndFL_Mullions
+    2300030: 2ndFL_Mullions 1
+    2300032: 2ndFL_Mullions 2
+    2300034: 2ndFL_Mullions 3
+    2300036: 2ndFL_Mullions 4
+    2300038: 2ndFL_Mullions 5
+    2300040: 2ndFL_Mullions 6
+    2300042: 2ndFL_Section
+    2300044: 2ndFL_Staircase_WoodRailing
+    2300046: 2ndFL_Stairs
+    2300048: 2ndFL_Washroom_Floor
+    2300050: 2ndFL_Washroom_Wall
+    2300052: 2ndFL_WindowSill
+    2300054: 2ndFL_WinGlass
+    2300056: 2ndFL_WinGlass 1
+    2300058: 2ndFL_WinGlass 2
+    2300060: 2ndFL_WinGlass 3
+    2300062: 2ndFL_WinGlass 4
+    2300064: 2ndFL_WinGlass 5
+    2300066: 2ndFL_WinGlass 6
+    2300068: 2ndFL_WoodFacade_01
+    2300070: 2ndFL_WoodFacade_02
+    2300072: 2ndFloor_Bedroom03_Floor
+    2300074: 2ndFloor_Bedroom03_Wall
+    2300076: 2ndFloor_WashroomMB_Floor
+    2300078: 2ndFloor_WashroomMB_Wall
+    2300080: Fascia
+    2300082: MainEntrance_Roof
+    2300084: MainEntrance_Roof001
+    2300086: Shingles
+    2300088: Staircase_GlassRailing
+    3300000: 2ndFL_Bedroom01_Floor
+    3300002: 2ndFL_Bedroom01_Wall
+    3300004: 2ndFL_Bedroom02_FLoor
+    3300006: 2ndFL_Bedroom02_Wall
+    3300008: 2ndFL_BedroomMB_Floor
+    3300010: 2ndFL_BedroomMB_Wall
+    3300012: 2ndFL_ExtWall
+    3300014: 2ndFL_FloorHallway_Floor
+    3300016: 2ndFL_FloorHallway_Wall
+    3300018: 2ndFL_Foyer
+    3300020: 2ndFL_HallwayRailing_Glass_01
+    3300022: 2ndFL_HallwayRailing_Glass_02
+    3300024: 2ndFL_HallwayRailing_Glass_03
+    3300026: 2ndFL_HallwayRailing_Glass_05
+    3300028: 2ndFL_Mullions
+    3300030: 2ndFL_Mullions 1
+    3300032: 2ndFL_Mullions 2
+    3300034: 2ndFL_Mullions 3
+    3300036: 2ndFL_Mullions 4
+    3300038: 2ndFL_Mullions 5
+    3300040: 2ndFL_Mullions 6
+    3300042: 2ndFL_Section
+    3300044: 2ndFL_Staircase_WoodRailing
+    3300046: 2ndFL_Stairs
+    3300048: 2ndFL_Washroom_Floor
+    3300050: 2ndFL_Washroom_Wall
+    3300052: 2ndFL_WindowSill
+    3300054: 2ndFL_WinGlass
+    3300056: 2ndFL_WinGlass 1
+    3300058: 2ndFL_WinGlass 2
+    3300060: 2ndFL_WinGlass 3
+    3300062: 2ndFL_WinGlass 4
+    3300064: 2ndFL_WinGlass 5
+    3300066: 2ndFL_WinGlass 6
+    3300068: 2ndFL_WoodFacade_01
+    3300070: 2ndFL_WoodFacade_02
+    3300072: 2ndFloor_Bedroom03_Floor
+    3300074: 2ndFloor_Bedroom03_Wall
+    3300076: 2ndFloor_WashroomMB_Floor
+    3300078: 2ndFloor_WashroomMB_Wall
+    3300080: Fascia
+    3300082: MainEntrance_Roof
+    3300084: MainEntrance_Roof001
+    3300086: Shingles
+    3300088: Staircase_GlassRailing
+    4300000: Shingles
+    4300002: 2ndFL_Mullions
+    4300004: 2ndFL_Mullions
+    4300006: 2ndFL_Mullions
+    4300008: 2ndFL_Mullions
+    4300010: 2ndFL_Mullions
+    4300012: 2ndFL_WinGlass
+    4300014: 2ndFL_WinGlass
+    4300016: 2ndFL_WinGlass
+    4300018: 2ndFL_WinGlass
+    4300020: 2ndFL_WinGlass
+    4300022: MainEntrance_Roof
+    4300024: 2ndFL_FloorHallway_Floor
+    4300026: 2ndFL_BedroomMB_Floor
+    4300028: 2ndFloor_WashroomMB_Floor
+    4300030: 2ndFloor_Bedroom03_Floor
+    4300032: 2ndFL_Bedroom02_FLoor
+    4300034: 2ndFL_Bedroom01_Floor
+    4300036: 2ndFL_Washroom_Floor
+    4300038: 2ndFL_Bedroom01_Wall
+    4300040: 2ndFL_Stairs
+    4300042: 2ndFL_ExtWall
+    4300044: 2ndFL_Foyer
+    4300046: 2ndFloor_Bedroom03_Wall
+    4300048: 2ndFL_Bedroom02_Wall
+    4300050: 2ndFL_FloorHallway_Wall
+    4300052: 2ndFL_Washroom_Wall
+    4300054: 2ndFL_BedroomMB_Wall
+    4300056: 2ndFloor_WashroomMB_Wall
+    4300058: 2ndFL_HallwayRailing_Glass_01
+    4300060: 2ndFL_Section
+    4300062: 2ndFL_HallwayRailing_Glass_02
+    4300064: 2ndFL_HallwayRailing_Glass_03
+    4300066: Staircase_GlassRailing
+    4300068: 2ndFL_HallwayRailing_Glass_05
+    4300070: 2ndFL_Mullions
+    4300072: 2ndFL_WinGlass
+    4300074: Fascia
+    4300076: 2ndFL_Mullions
+    4300078: 2ndFL_WinGlass
+    4300080: 2ndFL_WindowSill
+    4300082: 2ndFL_WoodFacade_01
+    4300084: 2ndFL_WoodFacade_02
+    4300086: MainEntrance_Roof001
+    4300088: 2ndFL_Staircase_WoodRailing
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

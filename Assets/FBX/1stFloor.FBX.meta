@@ -1,0 +1,322 @@
+fileFormatVersion: 2
+guid: ee1797818d278564083287a8f0e6bfce
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 1shFL_Livingroom
+    100002: 1stFL_Ceiling
+    100004: 1stFL_Ceiling001
+    100006: 1stFL_ExtWall
+    100008: 1stFL_Floor_WoodTIle
+    100010: 1stFL_Floor_WoodTIle_02
+    100012: 1stFL_FloorFoyer
+    100014: 1stFL_Foyer
+    100016: 1stFL_KitchenWall
+    100018: 1stFL_KitchenWalls
+    100020: 1stFL_MainEntranceExtWall
+    100022: 1stFL_Mullions
+    100024: 1stFL_Mullions 1
+    100026: 1stFL_Mullions 2
+    100028: 1stFL_Mullions 3
+    100030: 1stFL_PowderRoom
+    100032: 1stFL_Section
+    100034: 1stFL_Staircase_WoodRailing
+    100036: 1stFL_WindowFrameEntrance
+    100038: 1stFL_WindowSill
+    100040: 1stFL_WinGlass
+    100042: 1stFL_WinGlass 1
+    100044: 1stFL_WinGlass 2
+    100046: 1stFL_WinGlass 3
+    100048: 1stFL_WinGlass 4
+    100050: 1stFL_WinGlass 5
+    100052: 1stFL_WinGlass 6
+    100054: 1stFL_WoodFacade
+    100056: //RootNode
+    100058: ConcreteFoundation
+    100060: Door_MainEntrance
+    100062: Garage_ExteriorWall
+    100064: Garage_Sill
+    100066: GarageDoors
+    100068: GlassPatioDoor_01
+    100070: GlassPatioDoor_02
+    100072: GlassPatioWindow_01
+    100074: GlassPatioWindow_02
+    100076: MainEntrance_Stairs
+    100078: Staircase
+    100080: Stairs
+    100082: WallsGarage_Ceiling
+    100084: WallsGarage_Floor
+    100086: WallsGarage_Wall
+    400000: 1shFL_Livingroom
+    400002: 1stFL_Ceiling
+    400004: 1stFL_Ceiling001
+    400006: 1stFL_ExtWall
+    400008: 1stFL_Floor_WoodTIle
+    400010: 1stFL_Floor_WoodTIle_02
+    400012: 1stFL_FloorFoyer
+    400014: 1stFL_Foyer
+    400016: 1stFL_KitchenWall
+    400018: 1stFL_KitchenWalls
+    400020: 1stFL_MainEntranceExtWall
+    400022: 1stFL_Mullions
+    400024: 1stFL_Mullions 1
+    400026: 1stFL_Mullions 2
+    400028: 1stFL_Mullions 3
+    400030: 1stFL_PowderRoom
+    400032: 1stFL_Section
+    400034: 1stFL_Staircase_WoodRailing
+    400036: 1stFL_WindowFrameEntrance
+    400038: 1stFL_WindowSill
+    400040: 1stFL_WinGlass
+    400042: 1stFL_WinGlass 1
+    400044: 1stFL_WinGlass 2
+    400046: 1stFL_WinGlass 3
+    400048: 1stFL_WinGlass 4
+    400050: 1stFL_WinGlass 5
+    400052: 1stFL_WinGlass 6
+    400054: 1stFL_WoodFacade
+    400056: //RootNode
+    400058: ConcreteFoundation
+    400060: Door_MainEntrance
+    400062: Garage_ExteriorWall
+    400064: Garage_Sill
+    400066: GarageDoors
+    400068: GlassPatioDoor_01
+    400070: GlassPatioDoor_02
+    400072: GlassPatioWindow_01
+    400074: GlassPatioWindow_02
+    400076: MainEntrance_Stairs
+    400078: Staircase
+    400080: Stairs
+    400082: WallsGarage_Ceiling
+    400084: WallsGarage_Floor
+    400086: WallsGarage_Wall
+    2100000: WindowFrames
+    2100002: FloorWoodTile
+    2100004: Stairs
+    2100006: WindowGlass
+    2100008: ConcreteFoundation
+    2100010: WindowSill
+    2100012: Section
+    2100014: WallInt
+    2100016: GarageConcreteFloor
+    2100018: WallsExterior
+    2100020: FloorCeramicTile
+    2100022: WoodFacade
+    2100024: No Name
+    2300000: 1shFL_Livingroom
+    2300002: 1stFL_Ceiling
+    2300004: 1stFL_Ceiling001
+    2300006: 1stFL_ExtWall
+    2300008: 1stFL_Floor_WoodTIle
+    2300010: 1stFL_Floor_WoodTIle_02
+    2300012: 1stFL_FloorFoyer
+    2300014: 1stFL_Foyer
+    2300016: 1stFL_KitchenWall
+    2300018: 1stFL_KitchenWalls
+    2300020: 1stFL_MainEntranceExtWall
+    2300022: 1stFL_Mullions
+    2300024: 1stFL_Mullions 1
+    2300026: 1stFL_Mullions 2
+    2300028: 1stFL_Mullions 3
+    2300030: 1stFL_PowderRoom
+    2300032: 1stFL_Section
+    2300034: 1stFL_Staircase_WoodRailing
+    2300036: 1stFL_WindowFrameEntrance
+    2300038: 1stFL_WindowSill
+    2300040: 1stFL_WinGlass
+    2300042: 1stFL_WinGlass 1
+    2300044: 1stFL_WinGlass 2
+    2300046: 1stFL_WinGlass 3
+    2300048: 1stFL_WinGlass 4
+    2300050: 1stFL_WinGlass 5
+    2300052: 1stFL_WinGlass 6
+    2300054: 1stFL_WoodFacade
+    2300056: ConcreteFoundation
+    2300058: Door_MainEntrance
+    2300060: Garage_ExteriorWall
+    2300062: Garage_Sill
+    2300064: GarageDoors
+    2300066: GlassPatioDoor_01
+    2300068: GlassPatioDoor_02
+    2300070: GlassPatioWindow_01
+    2300072: GlassPatioWindow_02
+    2300074: MainEntrance_Stairs
+    2300076: Staircase
+    2300078: Stairs
+    2300080: WallsGarage_Ceiling
+    2300082: WallsGarage_Floor
+    2300084: WallsGarage_Wall
+    3300000: 1shFL_Livingroom
+    3300002: 1stFL_Ceiling
+    3300004: 1stFL_Ceiling001
+    3300006: 1stFL_ExtWall
+    3300008: 1stFL_Floor_WoodTIle
+    3300010: 1stFL_Floor_WoodTIle_02
+    3300012: 1stFL_FloorFoyer
+    3300014: 1stFL_Foyer
+    3300016: 1stFL_KitchenWall
+    3300018: 1stFL_KitchenWalls
+    3300020: 1stFL_MainEntranceExtWall
+    3300022: 1stFL_Mullions
+    3300024: 1stFL_Mullions 1
+    3300026: 1stFL_Mullions 2
+    3300028: 1stFL_Mullions 3
+    3300030: 1stFL_PowderRoom
+    3300032: 1stFL_Section
+    3300034: 1stFL_Staircase_WoodRailing
+    3300036: 1stFL_WindowFrameEntrance
+    3300038: 1stFL_WindowSill
+    3300040: 1stFL_WinGlass
+    3300042: 1stFL_WinGlass 1
+    3300044: 1stFL_WinGlass 2
+    3300046: 1stFL_WinGlass 3
+    3300048: 1stFL_WinGlass 4
+    3300050: 1stFL_WinGlass 5
+    3300052: 1stFL_WinGlass 6
+    3300054: 1stFL_WoodFacade
+    3300056: ConcreteFoundation
+    3300058: Door_MainEntrance
+    3300060: Garage_ExteriorWall
+    3300062: Garage_Sill
+    3300064: GarageDoors
+    3300066: GlassPatioDoor_01
+    3300068: GlassPatioDoor_02
+    3300070: GlassPatioWindow_01
+    3300072: GlassPatioWindow_02
+    3300074: MainEntrance_Stairs
+    3300076: Staircase
+    3300078: Stairs
+    3300080: WallsGarage_Ceiling
+    3300082: WallsGarage_Floor
+    3300084: WallsGarage_Wall
+    4300000: Door_MainEntrance
+    4300002: 1stFL_Floor_WoodTIle
+    4300004: Stairs
+    4300006: GarageDoors
+    4300008: 1stFL_Mullions
+    4300010: 1stFL_Mullions
+    4300012: 1stFL_WindowFrameEntrance
+    4300014: 1stFL_Mullions
+    4300016: 1stFL_Mullions
+    4300018: 1stFL_WinGlass
+    4300020: 1stFL_WinGlass
+    4300022: 1stFL_WinGlass
+    4300024: 1stFL_WinGlass
+    4300026: 1stFL_WinGlass
+    4300028: MainEntrance_Stairs
+    4300030: 1stFL_WinGlass
+    4300032: Garage_Sill
+    4300034: 1stFL_WinGlass
+    4300036: 1stFL_Section
+    4300038: WallsGarage_Wall
+    4300040: WallsGarage_Ceiling
+    4300042: WallsGarage_Floor
+    4300044: 1stFL_Ceiling
+    4300046: 1stFL_Foyer
+    4300048: 1stFL_ExtWall
+    4300050: ConcreteFoundation
+    4300052: 1stFL_FloorFoyer
+    4300054: Staircase
+    4300056: 1stFL_KitchenWalls
+    4300058: 1shFL_Livingroom
+    4300060: 1stFL_KitchenWall
+    4300062: Garage_ExteriorWall
+    4300064: 1stFL_MainEntranceExtWall
+    4300066: 1stFL_Floor_WoodTIle_02
+    4300068: 1stFL_Staircase_WoodRailing
+    4300070: 1stFL_WindowSill
+    4300072: 1stFL_PowderRoom
+    4300074: 1stFL_WoodFacade
+    4300076: 1stFL_Ceiling001
+    4300078: GlassPatioDoor_01
+    4300080: GlassPatioDoor_02
+    4300082: GlassPatioWindow_01
+    4300084: GlassPatioWindow_02
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: 6d1b0783e9204aa449558b3bf968b308
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Asphalt
+    100002: Backyard_ConcreteFence_01
+    100004: Backyard_ConcreteFence_02
+    100006: Backyard_ConcreteFence_03
+    100008: Backyard_Patio
+    100010: Backyard_Planter
+    100012: Backyard_Stairs
+    100014: Backyard_WoodFence
+    100016: Curb_Concrete
+    100018: CurbStreet
+    100020: FrontEntrance_Planter
+    100022: Grass
+    100024: Grass 1
+    100026: Grass 2
+    100028: Grass 3
+    100030: //RootNode
+    100032: Sidewalk_01
+    400000: Asphalt
+    400002: Backyard_ConcreteFence_01
+    400004: Backyard_ConcreteFence_02
+    400006: Backyard_ConcreteFence_03
+    400008: Backyard_Patio
+    400010: Backyard_Planter
+    400012: Backyard_Stairs
+    400014: Backyard_WoodFence
+    400016: Curb_Concrete
+    400018: CurbStreet
+    400020: FrontEntrance_Planter
+    400022: Grass
+    400024: Grass 1
+    400026: Grass 2
+    400028: Grass 3
+    400030: //RootNode
+    400032: Sidewalk_01
+    2100000: ConcreteFoundation
+    2100002: Fence_Concrete
+    2100004: No Name
+    2100006: WoodFacade
+    2100008: CurbStreet
+    2300000: Asphalt
+    2300002: Backyard_ConcreteFence_01
+    2300004: Backyard_ConcreteFence_02
+    2300006: Backyard_ConcreteFence_03
+    2300008: Backyard_Patio
+    2300010: Backyard_Planter
+    2300012: Backyard_Stairs
+    2300014: Backyard_WoodFence
+    2300016: Curb_Concrete
+    2300018: CurbStreet
+    2300020: FrontEntrance_Planter
+    2300022: Grass
+    2300024: Grass 1
+    2300026: Grass 2
+    2300028: Grass 3
+    2300030: Sidewalk_01
+    3300000: Asphalt
+    3300002: Backyard_ConcreteFence_01
+    3300004: Backyard_ConcreteFence_02
+    3300006: Backyard_ConcreteFence_03
+    3300008: Backyard_Patio
+    3300010: Backyard_Planter
+    3300012: Backyard_Stairs
+    3300014: Backyard_WoodFence
+    3300016: Curb_Concrete
+    3300018: CurbStreet
+    3300020: FrontEntrance_Planter
+    3300022: Grass
+    3300024: Grass 1
+    3300026: Grass 2
+    3300028: Grass 3
+    3300030: Sidewalk_01
+    4300000: Backyard_Patio
+    4300002: Backyard_Stairs
+    4300004: Backyard_Planter
+    4300006: Grass
+    4300008: Backyard_WoodFence
+    4300010: Backyard_ConcreteFence_02
+    4300012: Backyard_ConcreteFence_01
+    4300014: Backyard_ConcreteFence_03
+    4300016: Grass
+    4300018: Grass
+    4300020: FrontEntrance_Planter
+    4300022: Curb_Concrete
+    4300024: Grass
+    4300026: Asphalt
+    4300028: CurbStreet
+    4300030: Sidewalk_01
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
