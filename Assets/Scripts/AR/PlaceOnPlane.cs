@@ -154,6 +154,7 @@ public class PlaceOnPlane : MonoBehaviour
 
         GameObject shadowPlane = Instantiate(shadowQuad, spawnedObject.transform);
         shadowPlane.transform.localPosition = new Vector3(0, 0.02f, 0);
+        shadowPlane.transform.localScale = new Vector3(100f, 100f, 100f);
     }
         
     private void OnDisable() 

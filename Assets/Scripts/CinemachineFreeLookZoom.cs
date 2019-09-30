@@ -93,7 +93,7 @@ namespace Cinemachine
 #endif
                 }
 
-                Debug.LogError($"Scale is {scale}");
+                //Debug.LogError($"Scale is {scale}");
 				for (int i = 0; i < originalOrbits.Length; i++)
 				{
 					freelook.m_Orbits[i].m_Height = originalOrbits[i].m_Height * scale;
